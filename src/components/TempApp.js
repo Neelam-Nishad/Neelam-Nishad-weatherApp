@@ -27,13 +27,21 @@ const TempApp = () => {
     }, [search])
 
     return (
-        <>
+        <><div id="bx">
             <div className="box">
                 <div className="inputData">
-                    <input type="search" className='inputField'
-                        onChange={(event) => {
+                    <input type="search" className='inputField'id="inputF"/>
+                    {/* onChange={(event) => {
                             setSearch(event.target.value);
-                        }} />
+                        }} */}
+                </div>
+                <div className='searchBtn' >
+                        <button onClick={
+                            () => {
+                                let inp = document.getElementById('inputF').value;
+                                setSearch(inp);
+                            }
+                        }>Search</button>
                 </div>
                 {
                     city ? (
@@ -65,6 +73,7 @@ const TempApp = () => {
                         )
                 }
 
+            </div>
             </div>
         </>
     )
