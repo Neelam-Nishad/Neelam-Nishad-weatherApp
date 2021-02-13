@@ -42,8 +42,8 @@ const TempApp = () => {
                                     <h2 className="location">
                                         <i className="fas fa-street-view"></i>{search}
                                     </h2>
-                                    <h1 className="temp"> {`${temp.temp}`}° F</h1>
-                                    <h3 className="tempmin_max">min. {temp.temp_min}°  max. {temp.temp_max}°</h3>
+                                    <h1 className="temp"> {`math.round(${temp.temp}-273)`}° Celcius</h1>
+                                    <h3 className="tempmin_max">min. {`math.round(${temp.temp_min}-273)`}° Celcius  max. {`math.round(${temp.temp_max}-273)`}° Celcius</h3>
                                 </div>
                                 <div className='wave -one'></div>
                                 <div className='wave -two'></div>
