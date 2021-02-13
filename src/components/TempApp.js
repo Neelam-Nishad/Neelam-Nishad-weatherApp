@@ -30,10 +30,7 @@ const TempApp = () => {
         <><div id="bx">
             <div className="box">
                 <div className="inputData">
-                    <input type="search" className='inputField'id="inputF"/>
-                    {/* onChange={(event) => {
-                            setSearch(event.target.value);
-                        }} */}
+                    <input type="search" className='inputField' id="inputF"/>
                 </div>
                 <div className='searchBtn' >
                         <button onClick={
