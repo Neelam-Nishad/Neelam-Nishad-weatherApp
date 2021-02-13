@@ -8,7 +8,7 @@ const TempApp = () => {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState("Mumbai");
 
-    
+
 
     useEffect(() => {
         const fetchApi = async () => {
@@ -18,7 +18,7 @@ const TempApp = () => {
             // console.log(responsejson);
             setCity(responsejson);
             console.log(responsejson);
-            
+
             temp = responsejson.main;
             console.log(temp.temp);
         }
@@ -37,20 +37,20 @@ const TempApp = () => {
                 </div>
                 {
                     city ? (
-                            <div>
-                                <div className="info">
-                                    <h2 className="location">
-                                        <i className="fas fa-street-view"></i>{search}
-                                    </h2>
-                                    <h1 className="temp"> {`math.round(${temp.temp}-273)`}° Celcius</h1>
-                                    <h3 className="tempmin_max">min. {`math.round(${temp.temp_min}-273)`}° Celcius  max. {`math.round(${temp.temp_max}-273)`}° Celcius</h3>
-                                </div>
-                                <div className='wave -one'></div>
-                                <div className='wave -two'></div>
-                                <div className='wave -three'></div>
+                        <div>
+                            <div className="info">
+                                <h2 className="location">
+                                    <i className="fas fa-street-view"></i>{search}
+                                </h2>
+                                <h1 className="temp"> {Math.round(`${temp.temp}`-273)}° Celcius</h1>
+                                <h3 className="tempmin_max">min. {Math.round(`${temp.temp_min}`-273)}° Celcius  max. {Math.round(`${temp.temp_max}`-273)}° Celcius</h3>
                             </div>
-                            ) : (
-                                <div>
+                            <div className='wave -one'></div>
+                            <div className='wave -two'></div>
+                            <div className='wave -three'></div>
+                        </div>
+                    ) : (
+                            <div>
                                 <div className="info">
                                     <h2 className="location">
                                         <i className="fas fa-street-view"></i>{search}
@@ -62,7 +62,7 @@ const TempApp = () => {
                                 <div className='wave -two'></div>
                                 <div className='wave -three'></div>
                             </div>
-                                )
+                        )
                 }
 
             </div>
